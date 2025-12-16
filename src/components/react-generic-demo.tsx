@@ -54,7 +54,18 @@ function ReactGenericDemo() {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg font-medium ">why react-generic-select?</p>
+          <div className="space-y-2">
+            <p className="text-lg font-medium">Why react-generic-select?</p>
+            <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
+              <li>Built with TypeScript for end-to-end type safety</li>
+              <li>Supports both single and multi-select patterns</li>
+              <li>Works with any data structure through flexible key mapping</li>
+              <li>Built-in support for paginated data loading</li>
+              <li>Server-side search with local (client side) fallback</li>
+              <li>Fully customizable and built on top of shadcn/ui components</li>
+              <li>Lightweight and dependency-optimized</li>
+            </ul>
+          </div>
         </section>
 
         <section className="space-y-4">
@@ -80,6 +91,7 @@ function ReactGenericDemo() {
               <option value={10}>10</option>
               <option value={20}>20</option>
             </select>
+            <span> change per page to emulate paginated datas and scroll to bottom</span>
           </div>
 
           <GenericSingleSelect
@@ -176,6 +188,7 @@ function ReactGenericDemo() {
             isFetchingNextPage={isFetchingNextSkillsPage}
             onSearchChange={setSearchTermSkills}
             isLoading={isFetchingSkills}
+            className="py-2 px-4"
           />
 
           <Card>
